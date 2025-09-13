@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+  xmlns:th="https://www.thymeleaf.org"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+  </head>
+  <body>
+    <div id="content" class="pl-64 pt-12">
+      <div th:if="${loggedUser}">
+        <div th:replace="user/sidebar :: sidebar"></div>
+      </div>
+
+      <div class="flex justify-center flex-col pb-2 items-center">
+        <h1 class="font-sans font-bold text-4xl">Search Results</h1>
+        <div class="">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+          corrupti corporis harum earum ullam consequatur. Velit deleniti rem
+          excepturi explicabo et ad!
+        </div>
+        
+        
+
+      </div>
+      
+      <script>
+        console.log("search page");
+      </script>
+    </div>
+  </body>
+</html>

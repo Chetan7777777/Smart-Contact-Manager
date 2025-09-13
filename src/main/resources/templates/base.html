@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+  class="light"
+  lang="en"
+  xmlns:th="https://www.thymeleaf.org"
+  th:fragment="parent(content , title , script)"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:replace="${title}">Base page</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{'/css/output.css'}" />
+    <script th:src="@{'/script/script.js'}"></script>
+    <link rel="stylesheet" th:href="@{'/css/style.css'}">
+  </head>
+  <body class="dark:bg-gray-900 text-white bg-gray-100" >
+    <div th:if="${loggedUser}">
+      <div th:replace="user/user_navbar :: user-navbar"></div>
+    </div>
+
+    <div th:unless="${loggedUser}">
+      <div th:replace="navbar :: navbar"></div>
+    </div>
+   
+    <main class="pt-16  text-black dark:text-white">
+      <section th:replace="${content}"></section>
+    </main>
+    <!-- flow bite scipt -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script th:replace="${script}"></script>
+    <script>
+      runPresentTheme();
+    </script>
+</html>

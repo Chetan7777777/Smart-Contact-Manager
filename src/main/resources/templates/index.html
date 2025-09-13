@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div id="content" > 
+      <strong>home or index page </strong>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui totam in sunt iusto corporis, optio quo dolorum reiciendis laboriosam itaque voluptatem! Iusto eveniet fugit modi explicabo quam quasi quos.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex earum ratione esse et accusantium cupiditate, architecto magnam animi provident! Vero doloremque minus dolore consequatur veniam quas error, quibusdam suscipit tempora?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veritatis accusantium, veniam eius mollitia vel quos neque explicabo laudantium necessitatibus quia, nihil id, fuga nobis dolor incidunt consequatur dicta magni.
+    </div>
+
+    <script>
+      console.log("index page");
+      let a = document.getElementById("home");
+      a.style.color = "blue";
+    </script>
+  </body>
+</html>

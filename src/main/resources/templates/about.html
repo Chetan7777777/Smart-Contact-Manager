@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+
+  </head>
+  <body>
+    <h1 id="content">about page</h1>
+    
+
+
+
+
+    <script>
+            console.log("about page");
+      let a = document.getElementById("about");
+      a.style.color = "blue";
+    </script>
+  </body>
+</html>
